@@ -1,0 +1,40 @@
+﻿<Window x:Class="TorreHanci.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TorreHanci"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Loaded="Grid_Loaded">
+        <Button x:Name="Animate" Content="Button" HorizontalAlignment="Left" Margin="34,349,0,0" VerticalAlignment="Top" Width="112" Height="45"/>
+    <Button x:Name="Reset" Content="Button" HorizontalAlignment="Left" Margin="275,349,0,0" VerticalAlignment="Top" Width="112" RenderTransformOrigin="0.5,0.5" Height="45">
+        <Button.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform AngleX="-2.619"/>
+                <RotateTransform Angle="-0.66"/>
+                <TranslateTransform X="-0.439"/>
+            </TransformGroup>
+        </Button.RenderTransform>
+    </Button>
+    <ComboBox x:Name="MiComboBox" HorizontalAlignment="Left" Margin="488,349,0,0" VerticalAlignment="Top" Width="112" RenderTransformOrigin="0.378,0.494" Height="45" SelectedIndex="0">
+        <ComboBox.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.959"/>
+                <TranslateTransform X="0.05" Y="-1.015"/>
+            </TransformGroup>
+        </ComboBox.RenderTransform>
+        <ComboBoxItem Content="3"/>
+        <ComboBoxItem Content="4"/>
+        <ComboBoxItem Content="5"/>
+        <ComboBoxItem Content="6"/>
+        <ComboBoxItem Content="7"/>
+        <ComboBoxItem Content="8"/>
+    </ComboBox>
+    <Canvas x:Name="canvasTorres" HorizontalAlignment="Left" Height="302" Margin="34,21,0,0" VerticalAlignment="Top" Width="735"/>
+
+    </Grid>
+</Window>
