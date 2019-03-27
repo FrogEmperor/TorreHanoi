@@ -13,11 +13,14 @@ namespace TorreHanci
     {
         public int posX { get; set; }
         public int posY { get; set; }
-        public int discos { get; set; }
+        public int posXdiscos { get; set; }
+        public int posYdiscos { get; set; }
+        public List<Disco> discos { get; set; }
         public Torre(int posX, int posY)
         {
             this.posX = posX;
             this.posY = posY;
+            discos = new List<Disco>();
         }
         public void Dibuja(Canvas elCanvas)
         {
@@ -37,6 +40,19 @@ namespace TorreHanci
             Canvas.SetTop(r1, posY);
             Canvas.SetLeft(r2, posX - (r2.Width / 2 - r1.Width / 2));
             Canvas.SetTop(r2, posY + (r1.Height - r2.Height));
+
+            posYdiscos = (int)(posY + (r1.Height - r2.Height));
+            posXdiscos = (int)(r1.Width / 2);
+        }
+        public void DibujaDiscos(Canvas elCanvas)
+        {
+            int posY = posYdiscos;
+            foreach (Disco i in discos)
+            {
+                posY -= (int)i.altura;
+                Console.WriteLine(posY);
+                i.Dibujar(elCanvas,(int)(posX-(i.ancho/2-posXdiscos)),posY);
+            }
         }
     }
 }
