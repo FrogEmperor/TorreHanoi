@@ -23,7 +23,6 @@ namespace TorreHanci
         }
         public void Dibujar(Canvas elCanvas,int posX, int posY)
         {
-            
             Rectangle disco = new Rectangle();
             disco.Width = ancho;
             disco.Height = altura;
