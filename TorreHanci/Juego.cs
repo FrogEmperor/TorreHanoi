@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Threading;
 
 namespace TorreHanci
 {
@@ -23,17 +25,7 @@ namespace TorreHanci
             torres[1] = t2;
             Torre t3 = new Torre((int)canvasTorres.Width * 7 / 8, 100);
             torres[2] = t3;
-            foreach (Torre t in torres)
-            {
-                t.Dibuja(canvasTorres);
-            }
-            for (int i = 1; i <= 3; i++)
-            {
-                Disco d = new Disco(i);
-                torres[0].discos.Insert(0, d);
-            }
-            torres[0].DibujaDiscos(canvasTorres);
-            TorreHanoi(3, 0, 1, 2);
+            Reset(3, canvasTorres);
         }
         public void Next(Canvas canvasTorres)
         {
@@ -48,6 +40,10 @@ namespace TorreHanci
                     t.DibujaDiscos(canvasTorres);
                 }
                 indexDonde++;
+            }
+            else
+            {
+                throw new Exception("No hay mas movimientos");
             }
         }
         public void Reset(int discos, Canvas canvasTorres)
@@ -83,7 +79,7 @@ namespace TorreHanci
                 }
             }
         }
-        public void TorreHanoi(int quienSoy, int dondeEstoy, int vacio, int dondeVoy)
+        private void TorreHanoi(int quienSoy, int dondeEstoy, int vacio, int dondeVoy)
         {
             if (quienSoy > 1)
             {
@@ -95,6 +91,10 @@ namespace TorreHanci
             {
                 TorreHanoi(quienSoy - 1, vacio, dondeEstoy, dondeVoy);
             }
+        }
+        public int Moves()
+        {
+            return orden.Count;
         }
     }
 }

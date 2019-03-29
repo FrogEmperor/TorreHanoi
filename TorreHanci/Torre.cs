@@ -11,10 +11,10 @@ namespace TorreHanci
 {
     class Torre
     {
-        public int posX { get; set; }
-        public int posY { get; set; }
-        public int posXdiscos { get; set; }
-        public int posYdiscos { get; set; }
+        private int posX { get; set; }
+        private int posY { get; set; }
+        private int posXdiscos { get; set; }
+        private int posYdiscos { get; set; }
         public List<Disco> discos { get; set; }
         public Torre(int posX, int posY)
         {
@@ -50,7 +50,6 @@ namespace TorreHanci
             foreach (Disco i in discos)
             {
                 posY -= (int)i.altura;
-                Console.WriteLine(posY);
                 i.Dibujar(elCanvas,(int)(posX-(i.ancho/2-posXdiscos)),posY);
             }
         }

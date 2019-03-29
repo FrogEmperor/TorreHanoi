@@ -7,36 +7,57 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Loaded="Grid_Loaded">
-        <Canvas x:Name="canvasTorres" HorizontalAlignment="Left" Height="302" Margin="34,21,0,0" VerticalAlignment="Top" Width="735"/>
+        <Canvas x:Name="canvasTorres" HorizontalAlignment="Left" Height="302" Margin="20,21,0,0" VerticalAlignment="Top" Width="735"/>
+        <Label x:Name="lblMoves" Content="" Margin="20,21,468.6,365"/>
 
         <Button x:Name="Reset" Content="Reset" HorizontalAlignment="Left" Margin="34,349,0,0" VerticalAlignment="Top" Width="112" Height="45" Click="Reset_Click"/>
-    <Button x:Name="btnNext" Content="Next move" HorizontalAlignment="Left" Margin="275,349,0,0" VerticalAlignment="Top" Width="112" RenderTransformOrigin="0.5,0.5" Height="45" Click="btnNext_Click">
-        <Button.RenderTransform>
-            <TransformGroup>
-                <ScaleTransform/>
-                <SkewTransform AngleX="-2.619"/>
-                <RotateTransform Angle="-0.66"/>
-                <TranslateTransform X="-0.439"/>
-            </TransformGroup>
-        </Button.RenderTransform>
-    </Button>
-    <ComboBox x:Name="MiComboBox" HorizontalAlignment="Left" Margin="488,349,0,0" VerticalAlignment="Top" Width="112" RenderTransformOrigin="0.378,0.494" Height="45" DropDownClosed="MiComboBox_DropDownClosed">
-        <ComboBox.RenderTransform>
-            <TransformGroup>
-                <ScaleTransform/>
-                <SkewTransform/>
-                <RotateTransform Angle="0.959"/>
-                <TranslateTransform X="0.05" Y="-1.015"/>
-            </TransformGroup>
-        </ComboBox.RenderTransform>
-        <ComboBoxItem Content="3" IsSelected="True"/>
-        <ComboBoxItem Content="4"/>
-        <ComboBoxItem Content="5"/>
-        <ComboBoxItem Content="6"/>
-        <ComboBoxItem Content="7"/>
-        <ComboBoxItem Content="8"/>
-    </ComboBox>
+        <Button x:Name="btnNext" Content="Next move" HorizontalAlignment="Left" Margin="275,349,0,0" VerticalAlignment="Top" Width="112" RenderTransformOrigin="0.5,0.5" Height="45" Click="btnNext_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-2.619"/>
+                    <RotateTransform Angle="-0.66"/>
+                    <TranslateTransform X="-0.439"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <ComboBox x:Name="MiComboBox" HorizontalAlignment="Left" Margin="400,350,0,0" VerticalAlignment="Top" Width="112" RenderTransformOrigin="0.378,0.494" Height="45" DropDownClosed="MiComboBox_DropDownClosed">
+            <ComboBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.959"/>
+                    <TranslateTransform X="0.05" Y="-1.015"/>
+                </TransformGroup>
+            </ComboBox.RenderTransform>
+            <ComboBoxItem Content="3" IsSelected="True"/>
+            <ComboBoxItem Content="4"/>
+            <ComboBoxItem Content="5"/>
+            <ComboBoxItem Content="6"/>
+            <ComboBoxItem Content="7"/>
+            <ComboBoxItem Content="8"/>
+        </ComboBox>
         <Button x:Name="btnLastMove" Content="Previous Move" HorizontalAlignment="Left" Margin="153,350,0,0" VerticalAlignment="Top" Width="112" RenderTransformOrigin="0.5,0.5" Height="45" Click="btnLastMove_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-2.619"/>
+                    <RotateTransform Angle="-0.66"/>
+                    <TranslateTransform X="-0.439"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnAutomatico" Content="Automatic" HorizontalAlignment="Left" Margin="528,350,0,0" VerticalAlignment="Top" Width="112" RenderTransformOrigin="0.5,0.5" Height="45" Click="btnAutomatico_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-2.619"/>
+                    <RotateTransform Angle="-0.66"/>
+                    <TranslateTransform X="-0.439"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="653,350,0,0" VerticalAlignment="Top" Width="112" RenderTransformOrigin="0.5,0.5" Height="45" Click="btnStop_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
